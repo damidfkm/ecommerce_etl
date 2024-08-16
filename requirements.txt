@@ -1,0 +1,22 @@
+# Airflow and related packages
+apache-airflow==2.7.2
+apache-airflow-providers-google==10.4.1
+apache-airflow-providers-postgres==4.1.2
+
+# dbt and BigQuery packages
+dbt-bigquery==1.6.1
+dbt-core==1.6.1
+google-auth==2.23.0
+google-cloud-bigquery==3.11.4
+google-cloud-core==2.3.3
+
+# PostgreSQL client
+psycopg2-binary==2.9.8
+
+# Docker and environment management
+docker==6.1.3
+
+# Other useful packages
+requests==2.31.0
+pandas==2.1.0
+sqlalchemy==2.0.20

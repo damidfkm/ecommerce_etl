@@ -1,0 +1,40 @@
+
+name: 'ecommerce_dbt'
+version: '1.0.0'
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'ecommerce_dbt'
+
+# These configurations specify where dbt should look for different types of files.
+# The `model-paths` config, for example, states that models in this project can be
+# found in the "models/" directory. You probably won't need to change these!
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:       
+  - "target"
+  - "dbt_packages"
+
+
+# Configuring the target
+models:
+  ecommerce_dbt:
+    +ecommerce_data:
+        +orders:
+            +materialized: view
+        +products:
+            +materialized: view
+        +customers:
+            +materialized: view
+        +order_items:
+            +materialized: view
+        +sellers:
+            +materialized: view
+        +geolocation:
+            +materialized: view
+        +order_payments:
+            +materialized: view
